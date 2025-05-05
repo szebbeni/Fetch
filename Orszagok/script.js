@@ -3,7 +3,7 @@ fetch('https://api.sampleapis.com/countries/countries')
     .then(data => {
         const countries = {};
         data.forEach((country, index) => {
-            countries['country_${country.id}'] = country;
+            countries[`country_${country.id}`] = country;
         });
         console.log(countries);
     })
